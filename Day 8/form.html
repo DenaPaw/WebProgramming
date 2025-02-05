@@ -7,7 +7,10 @@
 
     <script>
         function generateEmail(form){
-            
+            document.getElementById
+            ("email").innerHTML = form.elements ["first"].value + "." + ["last"].value + "@atu.edu";
+
+            form.reset();
         }
 
 
@@ -16,7 +19,7 @@
 <body>
     <form>
         First Name: <input type="text" id="first"
-        placeholder="Enter yout first name here" size="15"> <br>
+        placeholder="Enter yout first name here" size="15" autofocus> <br>
 
         Last Name: <input type ="text" id="last" 
         placeholder="Enter your last name here" size="15">
