@@ -45,3 +45,11 @@ removeTextButton.addEventListener("click", function () {
         extraTextContainer.removeChild(lastParagraph);
     }
 });
+
+// Function to format names in the array
+function formatNames(arr) {
+    return arr.map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(", ");
+}
+
+// Example Usage
+console.log(formatNames(["alice", "bob", "charlie"]));
