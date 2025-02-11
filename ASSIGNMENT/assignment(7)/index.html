@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dena">
+    <title> Create a simple web form using HTML, CSS, and JavaScript. </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class ="container">
+        <h1>Form</h1>
+        <form id="form">
+            <input type="text" id="name" name="name" placeholder="Name"><br><br>
+            <input type="email" id="email" name="email" placeholder="Email"><br><br>
+            <input type="password" id="password" name="password" placeholder="Password"><br><br>
+            <input type="number" id="age" name="age" placeholder="Age"><br><br>
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <input type="radio" id="other" name="gender" value="Other"> Other<br><br>
+            <select id="country" name="country">
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+                <option value="Thailand">Thailand</option>
+                <option value="India">India</option>
+            </select><br><br>
+            <input type="checkbox" id="agree" name="agree">
+            <span>I agree to the Terms and Conditions</span><br><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
