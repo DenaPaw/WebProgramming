@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dena">
+    <title> Create a simple web form using HTML, CSS, and JavaScript. </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class ="container">
+        <h1>Form</h1>
+        <form id="form">
+            <input type="text" id="name" name="name" placeholder="Name" required><br>
+            <span class="error" id="nameError"></span><br>
+
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <span class="error" id="emailError"></span><br>
+
+            <input type="number" id="age" name="age" placeholder="Age" min="18" max="100" required><br>
+            <span class="error" id="ageError"></span><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
