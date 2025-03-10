@@ -20,3 +20,10 @@ Day 9:JSON
 Day 10:Fetch API Example
 
 Day 11:wordked on React and worked on the three card problem
+
+Day 12:Mood tracking App with React
+
+Day 13:React+Vite with TailwindCSS
+
+Day 14:NodeJS and ExpressJS
+
