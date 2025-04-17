@@ -19,7 +19,6 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editingId) {
-      // Update post
       axios.put(`http://localhost:5000/posts/${editingId}`, form)
         .then(res => {
           setPosts(posts.map(post => post._id === editingId ? res.data : post));
@@ -28,7 +27,6 @@ function App() {
         })
         .catch(err => console.error("Update error:", err));
     } else {
-      // Create post
       axios.post('http://localhost:5000/posts', form)
         .then(res => {
           setPosts([...posts, res.data]);
@@ -47,11 +45,14 @@ function App() {
     if (window.confirm("Do you want to delete this?")) {
       axios.delete(`http://localhost:5000/posts/${id}`)
         .then(() => {
-          setPosts(posts.filter(post => post._id !== id));
+          setPosts(posts.filter(post => post._id !== id)); // Remove from UI
         })
         .catch(err => console.error("Error deleting:", err));
     }
   };
+  
+
+  
 
   return (
     <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
@@ -85,8 +86,7 @@ function App() {
           <h3>{post.title}</h3>
           <p>{post.body}</p>
           <button onClick={() => handleEdit(post)} style={{ marginRight: '10px' }}>Edit</button>
-          <button onClick={() => handleDelete(post._id)}>Delete</button>
-        </div>
+          <button onClick={() => handleDelete(post._id)}>Delete</button>          </div>
       ))}
     </div>
   );

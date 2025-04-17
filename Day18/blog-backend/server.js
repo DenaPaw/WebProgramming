@@ -48,15 +48,17 @@ app.post('/posts', async (req, res) => {
     }
 });
 
+//Backend: Add a new route in Express
 app.delete('/posts/:id', async (req, res) => {
     try {
         await Post.findByIdAndDelete(req.params.id);
-        res.sendStatus(100);
+        res.sendStatus(200);
     } catch (err) {
         res.status(500).json({ message: 'Failed to delete post!' });
     }
 });
 
+//Backend: Add a new PUT route:
 app.put('/posts/:id', async (req, res) => {
     try {
         const { title, body } = req.body;
